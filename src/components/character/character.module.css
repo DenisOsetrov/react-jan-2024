@@ -1,0 +1,13 @@
+.imageSize {
+    height: 250px;
+}
+
+.characterBox {
+    background-color: slategray;
+}
+
+.imageSizeMouse {
+    height: 50px;
+    display: block; /* Зробити зображення блочним елементом, щоб він займав всю ширину контейнера */
+    margin: 0 auto; /* Автоматичний відступ зліва та справа для вирівнювання по центру */
+}
