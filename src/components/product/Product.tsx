@@ -33,7 +33,7 @@ const Product: FC<ITypeProductProps> = ({
     const newPrice: number = price - price * (discountPercentage || 0) / 100;
 
     return (
-        <div>
+        <div className={'a'}>
             <h2>{id}. {title}. Old price - {price}$.</h2>
             <h2>New price on this week - {newPrice}$.</h2>
             <p> Discount - {discountPercentage}%. </p>
