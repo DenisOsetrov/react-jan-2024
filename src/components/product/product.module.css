@@ -1,3 +1,77 @@
-.a {
-    background-color: red;
+.productBox {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: darkslateblue;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #f1dbcf;
+}
+
+.priceBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.oldPrice {
+    color: #999;
+    font-size: 1.3em;
+}
+
+.discount {
+    color: #ff0000;
+    border: #4ed9b4 solid 1px;
+    background-color: rgba(218, 218, 100, 0.79);
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.newPrice {
+    color: #407ae3;
+    font-size: 2.2em;
+    border: #4ed9b4 solid 2px;
+    border-radius: 10px;
+}
+
+.descriptionTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Вирівнює контент по центру по горизонталі */
+    align-items: center; /* Вирівнює контент по центру по вертикалі */
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+    object-fit: contain; /* Зберігає пропорції та обрізає картинку, щоб вона вмістилася */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.details {
+    font-size: 14px;
+    color: #666;
+}
+
+.brand, .category, .rating, .stock, .thumbnail {
+    margin-bottom: 5px;
 }

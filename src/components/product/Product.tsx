@@ -1,21 +1,22 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
+import styles from './product.module.css';
 
 export interface IProductProps {
-    id: number,
-    title: string,
-    description: string,
-    price: number,
-    discountPercentage?: number,
-    rating: number,
-    stock: number,
-    brand: string,
-    category: string,
-    thumbnail?: string,
-    images: string[]
+    id: number;
+    title: string;
+    description: string;
+    price: number;
+    discountPercentage?: number;
+    rating: number;
+    stock: number;
+    brand: string;
+    category: string;
+    thumbnail?: string;
+    images: string[];
 }
 
-// пропишемо і протипізуємо children (частина коду, що знаходиться між відкритим і закритим тегами компонента)
-export type ITypeProductProps = IProductProps & {children?: React.ReactNode};
+export type ITypeProductProps = IProductProps & { children?: React.ReactNode };
+
 const Product: FC<ITypeProductProps> = ({
                                             id,
                                             title,
@@ -27,31 +28,38 @@ const Product: FC<ITypeProductProps> = ({
                                             rating,
                                             stock,
                                             thumbnail,
-                                            description}) => {
+                                            description
+                                        }) => {
 
     // Обчислення нової ціни з урахуванням знижки
-    const newPrice: number = price - price * (discountPercentage || 0) / 100;
+    const newPrice: number = +(price - price * (discountPercentage || 0) / 100).toFixed(1);
 
     return (
-        <div className={'a'}>
-            <h2>{id}. {title}. Old price - {price}$.</h2>
-            <h2>New price on this week - {newPrice}$.</h2>
-            <p> Discount - {discountPercentage}%. </p>
-            <h4> Description: </h4>
-            <p> Brand - {brand} </p>
-            <p> Category - {category} </p>
-            <p> {description} </p>
-                        {/*Відображення кожного зображення з масиву images за допомогою методу map().*/}
-                        {/*Кожне зображення має унікальний ключ, що дорівнює індексу масиву*/}
-            <ul>
-                {images.length > 0 && images.map((image, index) => <li><img key={index} src={image} alt={title}/></li>)}
-            </ul>
-            <p> Thumbnail - {thumbnail} </p>
-            <p> Rating - {rating} </p>
-            <p> Stock - {stock} units</p>
-
-
-
+        <div className={styles.productBox}>
+            <h2 className={styles.title}>{id}. {title}</h2>
+            <div className={styles.priceBox}>
+              <span className={styles.oldPrice}>
+    Old price: <span style={{textDecoration: 'line-through'}}>{price}</span> $
+</span>
+                <span className={styles.discount}>Discount: {discountPercentage}%</span>
+                <span className={styles.newPrice}>New price: ${newPrice}</span>
+            </div>
+            <h4 className={styles.descriptionTitle}>Description:</h4>
+            <p className={styles.description}>{description}</p>
+            <div className={styles.imageGallery}>
+                {images.map((image, index) => (
+                    <img key={index} className={styles.image} src={image} alt={title} />
+                ))}
+            </div>
+            <div className={styles.details}>
+                <p className={styles.brand}>Brand: {brand}</p>
+                <p className={styles.category}>Category: {category}</p>
+                <p className={styles.rating}>Rating: {rating}</p>
+                <p className={styles.stock}>Stock: {stock} units</p>
+                <p className={styles.thumbnail}>
+                    Thumbnail: <a href={thumbnail} target="_blank" rel="noopener noreferrer">{thumbnail}</a>
+                </p>
+            </div>
         </div>
     );
 };
