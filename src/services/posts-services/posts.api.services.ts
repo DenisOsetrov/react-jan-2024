@@ -1,24 +1,22 @@
 import {PostsResponseModel} from "../../models/response-models/PostsResponseModel";
+import axios from "axios";
 
-const getAllPostsByUserId = (id:number): Promise<PostsResponseModel> => {
-    return fetch('https://dummyjson.com/posts/user/'+ id)
-        .then((value) => value.json())
+
+// axiosInstance - стандартна назва базового об'єкта.
+const axiosInstance = axios.create({
+    baseURL: 'https://dummyjson.com',
+    headers: {'Content-Type': 'application/json/'}
+})
+
+// розділяємо url на частини: базову і змінну і додаємо id!
+const getAllPostsByUserId = (id:number) : Promise<PostsResponseModel> => {
+    return axiosInstance.get('/posts/user/'+id)
+        .then(response => response.data)  // повертаємо 1 об'єкт axios, а не всі!
 }
+
 
 export {
     getAllPostsByUserId
 }
 
-
-// // axiosInstance - стандартна назва базового об'єкта.
-// const axiosInstance = axios.create ({
-//     baseURL: 'https://dummyjson.com',
-//     headers: {'Content-Type': 'application/json'}
-// })
-//
-// const getAllUsers = (): Promise<UsersResponseModel> => {
-//     return axiosInstance.get('/users')
-//         .then(response => response.data); // axios повертає багато об'єктів, тому вказуємо, лише на потрібний - data!
-// };
-// // + import
 // // перевести в Аxios!!!! + CSS

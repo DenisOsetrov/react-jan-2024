@@ -7,8 +7,15 @@ interface IProps {
 
 const PostComponent : FC <IProps> = ({post}) => {
     return (
-        <div>{post.id}. {post.body}</div>
-    );
+        <div>
+            <h3>{post.id}. {post.title}</h3>
+            <p>Post "{post.body}"</p>
+            <p>UserId: {post.userId}. Reaction: {post.reactions}</p>
+            <p>Tags: <i>{post.tags.join(', ')}</i></p>
+        </div>
+
+)
+    ;
 };
 
 export default PostComponent;
