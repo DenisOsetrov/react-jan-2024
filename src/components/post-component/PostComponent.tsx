@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {PostBasicModel} from "../../models/basic-models/PostBasicModel";
 
-const PostComponent = () => {
+interface IProps {
+    post: PostBasicModel
+}
+
+const PostComponent : FC <IProps> = ({post}) => {
     return (
-        <div>
-            
-        </div>
+        <div>{post.id}. {post.body}</div>
     );
 };
 
