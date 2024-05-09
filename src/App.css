@@ -1,38 +1,43 @@
-/*.App {*/
-/*  text-align: center;*/
-/*}*/
+h2 {
+    text-align: center;
+    color: brown;
+}
 
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
+.task {
+    background-color: darkgray;
+    border: darkslateblue solid 6px;
+}
 
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
+.wrapperApp {
+    display: flex;
+}
 
-/*.App-header {*/
-/*  background-color: #282c34;*/
-/*  min-height: 100vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-size: calc(10px + 2vmin);*/
-/*  color: white;*/
-/*}*/
+.users-box {
+    background-color: #8397a2;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 20px;
+    font-size: 0.7em;
+}
 
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
+.users-box>h2 {
+    font-size: 26px;
+}
 
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
+.posts-box {
+    background-color: #8d9d79;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.posts-box h3 {
+    text-align: center;
+}
+
+img {
+    width: 50px;
+}
