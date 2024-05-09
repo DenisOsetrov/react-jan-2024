@@ -5,7 +5,7 @@ interface IProps {
     post: PostBasicModel
 }
 
-const PostComponent : FC <IProps> = ({post}) => {
+const PostComponent: FC<IProps> = ({post}) => {
     return (
         <div>
             <h3>{post.id}. {post.title}</h3>
@@ -14,8 +14,8 @@ const PostComponent : FC <IProps> = ({post}) => {
             <p>Tags: <i>{post.tags.join(', ')}</i></p>
         </div>
 
-)
-    ;
+    )
+        ;
 };
 
 export default PostComponent;
