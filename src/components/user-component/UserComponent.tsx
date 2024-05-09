@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {UserBasicModel} from "../../models/basic-models/UserBasicModel";
+import './style.UserComponent.css'
 
 interface IProps {
     user: UserBasicModel;
@@ -55,7 +56,7 @@ const UserComponent: FC<IProps> = ({user, choseUser}) => {
                 <li>EIN: {user.ein}</li>
                 <li>SSN: {user.ssn}</li>
                 <li>User Agent: {user.userAgent}</li>
-                <span><button onClick={() => {
+                <span><button className="button" onClick={() => {
                     choseUser(user.id);
                 }}>show posts this user
             </button></span>

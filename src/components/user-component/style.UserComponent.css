@@ -1,0 +1,17 @@
+.button {
+    background-color: #f3f05b; /* Зелений колір кнопки */
+    /*border: none; !* Видалення рамки *!*/
+    color: #093881; /* Колір тексту */
+    padding: 3px 6px; /* Відступи від тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    text-decoration: none; /* Видалення підкреслення */
+    display: inline-block; /* Зробити кнопку блоковим елементом */
+    font-size: 12px; /* Розмір шрифту */
+    margin: 3px 2px; /* Зовнішні відступи */
+    cursor: pointer; /* Курсор при наведенні */
+    border-radius: 10px; /* Радіус кутів */
+}
+
+.button:hover {
+    background-color: #d5c624; /* Зелений колір при наведенні */
+}
