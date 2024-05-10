@@ -1,6 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
 
-import {PostsResponseModel} from "../../models/response-models/PostsResponseModel";
 import {PostBasicModel} from "../../models/basic-models/PostBasicModel";
 import {getAllPostsByUserId} from "../../services/posts-services/posts.api.services";
 import PostComponent from "../post-component/PostComponent";
@@ -9,7 +8,7 @@ interface IProps {
     userId: number
 }
 
-const PostsComponent:FC<IProps> = ({userId}) => {
+const PostsComponent: FC<IProps> = ({userId}) => {
 
 
     const [posts, setPosts] = useState<PostBasicModel[]>([])
@@ -20,7 +19,7 @@ const PostsComponent:FC<IProps> = ({userId}) => {
             .then(value => setPosts(value.posts)); // setPosts([...value.posts])) - теж працює, як і з users
 
     }, [userId]);
-             console.log(posts) // відображає два значення: початкове і оновлене!
+    console.log(posts) // відображає два значення: початкове і оновлене!
     return (
         <div>
             {
