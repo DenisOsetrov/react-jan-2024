@@ -13,7 +13,7 @@ interface IProps {
 }
 
 // пропишемо типи для подвійного компонента та протипізуємо його children. Можна називати ITypeProps
-type PropsWithChildren<T> = T & {children?: React.ReactNode}
+type PropsWithChildren<T> = T & { children?: React.ReactNode }
 
 const Character: FC<PropsWithChildren<IProps>> = ({name, image, children}) => {
     return (
@@ -21,7 +21,7 @@ const Character: FC<PropsWithChildren<IProps>> = ({name, image, children}) => {
             <h2>{name}</h2>
             <img className={styles.imageSize} src={image}
                  alt={name}/>
-            <p >{children}</p>
+            <p>{children}</p>
         </div>
     );
 };
