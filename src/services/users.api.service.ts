@@ -9,7 +9,7 @@ let axiosInstance = axios.create({
 })
 
 // беремо axiosInstance - з базовою url - і додаємо /users - для отримання всіє юзерів
-const getAllUsers = ():Promise <AxiosResponse<UserModel[]>> => {
+const getAllUsers = (): Promise<AxiosResponse<UserModel[]>> => {
     return axiosInstance.get('/users')
     //     .then(value => value.data) // !!! Це важливо! Тут ми дістаємо 1 об'єкт з багатьох, тому після
     // // розкоментування треба змінювати компоненту UsersComponent, бо там ми отримуємо від axios декілька об'ктів і
@@ -18,5 +18,5 @@ const getAllUsers = ():Promise <AxiosResponse<UserModel[]>> => {
 
 
 export {
-   getAllUsers
+    getAllUsers
 }
