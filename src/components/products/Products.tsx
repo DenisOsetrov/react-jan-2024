@@ -6,19 +6,33 @@ const Products: FC = () => {
 
     const [products, setProduct] = useState<IProductProps[]>([]);
 
-useEffect(() => {
-    fetch('https://dummyjson.com/products')
-        .then(value => value.json())
-        .then(({products}) => {
-            setProduct(products)
-        });
-}, []);
+    useEffect(() => {
+        fetch('https://dummyjson.com/products')
+            .then(value => value.json())
+            .then(({products}) => {
+                setProduct(products)
+            });
+    }, []);
 
 
     return (
         <div>
-            {products.map(({id, title, description, price, images, category, brand, rating, stock,thumbnail,discountPercentage}) => (
-                <Product key={id} id={id} title={title} description={description} price={price} images={images} category={category} brand={brand} discountPercentage={discountPercentage} rating={rating} stock={stock} thumbnail={thumbnail} />))}
+            {products.map(({
+                               id,
+                               title,
+                               description,
+                               price,
+                               images,
+                               category,
+                               brand,
+                               rating,
+                               stock,
+                               thumbnail,
+                               discountPercentage
+                           }) => (
+                <Product key={id} id={id} title={title} description={description} price={price} images={images}
+                         category={category} brand={brand} discountPercentage={discountPercentage} rating={rating}
+                         stock={stock} thumbnail={thumbnail}/>))}
         </div>
     );
 };
