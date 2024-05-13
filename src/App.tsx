@@ -5,7 +5,7 @@ import PostsComponent from "./components/posts-component/PostsComponent";
 
 const App: FC = () => {
 
-    const [userId, setUserId] = useState<number>(0);
+    const [userId, setUserId] = useState<number | null>(null);
     const choseUser = (id: number) => {
         setUserId(id);
     }
