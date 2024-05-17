@@ -5,7 +5,9 @@ import FormComponent from "./components/FormComponent";
 const App: FC = () => {
   return (
       <>
+
           <FormComponent/>
+
       </>
   );
 }
