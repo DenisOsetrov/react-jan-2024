@@ -9,23 +9,20 @@ interface IFormProps {
 
 const FormComponent: FC = () => {
 
-    // 1. Використовуємо useForm і створюємо інтерфейс IFormProps
-    // 2. Зі змінної form деструктуризуємо стантартний об'єкт register, метод handleSubmit,  і об'єкт formState -
+    // Використовуємо useForm і створюємо інтерфейс IFormProps
+    // Зі змінної form деструктуризуємо стантартний об'єкт register, метод handleSubmit,  і об'єкт formState -
     // для виведення помилок.
-    // 3. ВВодимо в input і в форму деструктуризовані об'єкти
-    // 4. з функції handleSubmit виносимо колбек функцію в окрему змінну
-
-    let {
+    const {
         register,
         handleSubmit,
-        formState: {errors}} = useForm<IFormProps>();
+        formState:{errors}} = useForm<IFormProps>()
 
-
+    // З функції handleSubmit виносимо колбек функцію в окрему змінну
     const saveValue = (formValue: IFormProps) => {
         console.log(formValue)  // виводить заповнений об'єкт в консоль
     }
 
-
+            // Вводимо в input і в форму деструктуризовані об'єкти
     return (
         <div>
 
