@@ -1,9 +1,0 @@
-потрібно на jsonplaceholder відправити об'єкт post
-відповідно, для цього вам потрібно його створити.
-Створення об'єкту повинно відбуватись за допомоги форми з useForm та валідацією.
-Як відправляти дані на jsonplaceholder є в документації.
-Валідація на кожен input:
-    - title: pattern (only word)
-    - body:  pattern (only word)
-    - userId?: <1 (>=1) i <10, number
-    зробимо POST запит на jsonplaceholder!
