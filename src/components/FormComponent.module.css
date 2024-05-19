@@ -1,0 +1,72 @@
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.formContainer {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-right: 20px; /* Відстань між формою і відповіддю */
+}
+
+.responseContainer {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-left: 20px; /* Відстань між формою і відповіддю */
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.labelText {
+    width: 100px;
+    display: inline-block;
+    word-wrap: break-word; /* або overflow-wrap: break-word; */
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: nowrap; /* Забороняє перенесення тексту на новий рядок */
+    overflow: hidden; /* Приховує текст, який не поміщається */
+    text-overflow: ellipsis; /* Замінює прихований текст на ... */
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
