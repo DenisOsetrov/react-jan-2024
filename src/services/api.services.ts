@@ -15,8 +15,8 @@ const axiosInstance = axios.create({
                 //      return request;
                 //  })
 
-// нас знадобиться лише savePost метод
-// так само створюємо const userServices і експортуємо вже два серсіси - так правильно і зручно!!!
+// нам знадобиться лише метод savePost
+// так само створюємо const userServices за потреби і експортуємо вже два сервіси - так правильно і зручно!!!
 const postServices = {
 
     getAllPosts: () => {
