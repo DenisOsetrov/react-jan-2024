@@ -43,6 +43,10 @@ const postServices = {
             // {headers: {"Content-Type": "application/json; charset=UTF-8"}} // хедери додали 1 раз при створенні
                         // axios, але можна і тут
     )
+            .then(response => {
+                console.log(response.data); // Виводимо повну відповідь
+                return response;
+            })
 
         // fetch('https://jsonplaceholder.typicode.com/posts', {
         //     method: 'POST',
@@ -56,7 +60,6 @@ const postServices = {
         //     },
         // })
         //     .then((response) => response.json())
-
     }
 }
 

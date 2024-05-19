@@ -32,7 +32,7 @@ const FormComponent: FC = () => {
     const [post, setPost] = useState<IPostResponseModel | null>(null)
 
     const saveValue = (post: IFormModel) => {
-        console.log(post)  // виводить заповнений об'єкт в консоль, що відповідає валідації.
+        // console.log(post)  // виводить заповнений об'єкт в консоль, що відповідає валідації.
         // formValue - диструктуруємо {title, body, userId}}
 
         postServices.savePost(post)
