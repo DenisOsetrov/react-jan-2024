@@ -23,7 +23,7 @@ const FormComponent: FC = () => {
         register,
         handleSubmit,
         formState: {errors} //  formState: {errors, isValid - чи валідна форма},
-    } = useForm<IFormProps>({mode:"all", resolver: joiResolver(postValidator)});   // {mode} - як слідкувати! resolve
+    } = useForm<IFormProps>({mode: "all", resolver: joiResolver(postValidator)});   // {mode} - як слідкувати! resolve
     // - слідкуватиме за формою
 
 
@@ -34,62 +34,34 @@ const FormComponent: FC = () => {
 
     return (
         <div>
-
+            <h2>Post of user</h2>
             <form onSubmit={handleSubmit(saveValue)}>
 
-                <input type={"text"} {...register('title')}/>
+                <label>
+                    Title:
+                    <input type="text" {...register('title')} />
+                </label>
                 <br/>
-                {errors.title && <div>{errors.title.message}</div>}
-                <input type={"text"} {...register('body')}/>
-                <br/>
+                {errors.title && <div style={{color: 'red'}}>{errors.title.message}</div>}
 
-                <input type={"number"} {...register('userId')}/>
+                <label>
+                    Body:
+                    <input type="text" {...register('body')} />
+                </label>
                 <br/>
+                {errors.body && <div style={{color: 'red'}}>{errors.body.message}</div>}
 
-                <button>sent</button>
+                <label>
+                    User ID:
+                    <input type="number" {...register('userId')} />
+                </label>
+                <br/>
+                {errors.userId && <div style={{color: 'red'}}>{errors.userId.message}</div>}
+
+                <button type="submit">Sent to post</button>
             </form>
         </div>
     );
 };
 
-
-// Гарна повна форма від GPT
-// const FormComponent = () => {
-//     const { register, handleSubmit, formState: { errors } } = useForm({
-//         resolver: joiResolver(postValidator)
-//     });
-//
-//     const saveValue = (data) => {
-//         console.log(data);
-//     };
-//
-//     return (
-//         <div>
-//             <form onSubmit={handleSubmit(saveValue)}>
-//                 <label>
-//                     Title:
-//                     <input type="text" {...register('title')} />
-//                 </label>
-//                 <br />
-//                 {errors.title && <div style={{ color: 'red' }}>{errors.title.message}</div>}
-//
-//                 <label>
-//                     Body:
-//                     <input type="text" {...register('body')} />
-//                 </label>
-//                 <br />
-//                 {errors.body && <div style={{ color: 'red' }}>{errors.body.message}</div>}
-//
-//                 <label>
-//                     User ID:
-//                     <input type="number" {...register('userId')} />
-//                 </label>
-//                 <br />
-//                 {errors.userId && <div style={{ color: 'red' }}>{errors.userId.message}</div>}
-//
-//                 <button type="submit">Submit</button>
-//             </form>
-//         </div>
-//     );
-// };
 export default FormComponent;
