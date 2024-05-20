@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import {ICommentModel} from "../models/ICommentModel";
 import {userApiService} from "../services/api.service";
 
-const CommentsComponent: FC = () => {
+const CommentsPage: FC = () => {
 
     const [comments, setComments] = useState<ICommentModel[]>([]);
 
@@ -27,4 +27,4 @@ const CommentsComponent: FC = () => {
     );
 };
 
-export default CommentsComponent;
+export default CommentsPage;

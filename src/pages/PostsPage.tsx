@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import {IPostModel} from "../models/IPostModel";
 import {userApiService} from "../services/api.service";
 
-const PostsComponent: FC = () => {
+const PostsPage: FC = () => {
 
     const [posts, setPosts] = useState<IPostModel[]>([]);
 
@@ -27,4 +27,4 @@ const PostsComponent: FC = () => {
     );
 };
 
-export default PostsComponent;
+export default PostsPage;

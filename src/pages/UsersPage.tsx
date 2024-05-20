@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {IUserModel} from "../models/IUserModel";
 import {userApiService} from "../services/api.service";
 
-const UsersComponent = () => {
+const UsersPage = () => {
 
     const [users, setUsers] = useState<IUserModel[]>([]);
 
@@ -27,4 +27,4 @@ userApiService.getAllUsers().then(value => {
     );
 };
 
-export default UsersComponent;
+export default UsersPage;
