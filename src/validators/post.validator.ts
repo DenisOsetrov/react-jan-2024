@@ -23,7 +23,7 @@ export const postValidator = Joi.object({
         }),
     userId: Joi
         .number()
-        .max(100)
+        .max(10)
         .integer()
         .positive()
         .required()
