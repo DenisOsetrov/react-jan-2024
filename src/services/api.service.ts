@@ -5,7 +5,7 @@ import { ICommentModel } from '../model/ICommentModel';
 
 let axiosInstance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
-    headers: {"Content-Type":"application/json", }
+    headers: {"Content-Type":"application/json; charset=UTF-8", }
 });
 
 const userApiService = {
