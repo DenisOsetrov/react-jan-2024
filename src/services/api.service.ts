@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
-import { IUserModel } from '../model/IUserModel';
-import { IPostModel } from '../model/IPostModel';
-import { ICommentModel } from '../model/ICommentModel';
+import { IUserModel } from '../models/IUserModel';
+import { IPostModel } from '../models/IPostModel';
+import { ICommentModel } from '../models/ICommentModel';
 
 let axiosInstance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
