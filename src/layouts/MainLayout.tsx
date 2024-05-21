@@ -12,11 +12,11 @@ const MainLayout = () => {
                     Please make your choice and choose one of three options!
                 </h2>
             </NavLink>
-            <HeaderComponent />
+            <HeaderComponent/>
             <div className="content">
-                <Outlet />
+                <Outlet/>
             </div>
-            <FooterComponent />
+            <FooterComponent/>
         </div>
     );
 };
