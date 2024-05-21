@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import {NavLink, Outlet} from 'react-router-dom';
 import './MainLayout.css';
 import HeaderComponent from "../components/header/HeaderComponent";
 import FooterComponent from "../components/footer/FooterComponent";
@@ -7,7 +7,11 @@ import FooterComponent from "../components/footer/FooterComponent";
 const MainLayout = () => {
     return (
         <div>
-            <h2 className="center">Please make your choice and choose one of three options!</h2>
+            <NavLink to="" className="no-decoration">
+                <h2 className="center">
+                    Please make your choice and choose one of three options!
+                </h2>
+            </NavLink>
             <HeaderComponent />
             <div className="content">
                 <Outlet />

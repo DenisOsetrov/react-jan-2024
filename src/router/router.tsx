@@ -13,7 +13,7 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         errorElement: <ErrorPage />,
         children: [
-            { index: true, element: <HomePage /> },
+            { index: true, element: <HomePage /> }, // або можна використати path: '' для home
             { path: 'users', element: <UsersPage /> },
             { path: 'posts', element: <PostsPage /> },
             { path: 'comments', element: <CommentsPage /> },
