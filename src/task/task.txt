@@ -10,8 +10,9 @@
 1. Налаштуємо сервиси взаємодії з АРІ, використовуючи бібліотеку axios.
 2. Створимо моделі даних для users, posts, comments.
 3. Створимо компоненти users, posts, comments.
-4. Встановимо бібліотеку react-router-dom
-5. Видаляємо файли App.tsx i App.css. Вносимо зміни в index.tsx, створимо router і будемо за ним слідкуватию
+4. Встановимо бібліотеку react-router-dom.
+5. Видаляємо файли App.tsx i App.css. Вносимо зміни в index.tsx, створимо router і будемо за ним слідкуватию.
 6. Створимо директорії: pages, layouts-основний => MainLayout: <Header/>, <Footer/>,<Outlet/>-заміняємо частина.
-7. Створюємо в layout - errorPage і додаємо errorElement
-8. Розділяємо дані в router.tsx i index.tsx
+7. Створюємо в layout - errorPage і додаємо errorElement.
+8. Розділяємо дані в router.tsx i index.tsx.
+9. Стилізуємо компоненти і pages.
