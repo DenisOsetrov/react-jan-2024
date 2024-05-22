@@ -3,6 +3,7 @@
     - users
     - posts
     - comments
+    - (home)
 Дані брати з https://jsonplaceholder.typicode.com
 При переході на кожну з них отримувати відповідні відповіді від jsonplaceholder та виводити всі об'єкти.
 
