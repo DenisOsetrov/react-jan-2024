@@ -1,9 +1,12 @@
 import React from 'react';
 
-const UserComponent = () => {
+const UserComponent = ({user}) => {
     return (
         <div>
-            UserComponent
+            <li key={user.id}>
+                <h3>{user.id}. {user.name}</h3>
+                <p>Email: {user.email}. Phone: {user.phone}</p>
+            </li>
         </div>
     );
 };
