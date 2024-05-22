@@ -7,15 +7,20 @@ import FooterComponent from "../components/footer/FooterComponent";
 const MainLayout: FC = () => {
     return (
         <div>
+
             <NavLink to="" className="no-decoration">
                 <h2 className="center">
                     Please make your choice and choose one of three options!
                 </h2>
             </NavLink>
+
             <HeaderComponent/>
+
             <div className="content">
+                {/* Outlet - реактівський компонент для змінної частини сторінки*/}
                 <Outlet/>
             </div>
+
             <FooterComponent/>
         </div>
     );

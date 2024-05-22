@@ -1,13 +1,15 @@
 import React, {FC, useEffect, useState} from 'react';
 import {ICommentModel} from "../models/ICommentModel";
-import {userApiService} from "../services/api.service";
+import commentsService from "../services/comments-api-service/comments.service";
+import CommentComponent from "../components/CommentComponent";
+
 
 const CommentsPage: FC = () => {
 
     const [comments, setComments] = useState<ICommentModel[]>([]);
 
     useEffect(() => {
-        userApiService.getAllComments().then(value => {
+        commentsService.getAllComments().then(value => {
             setComments(value.data)
         })
     }, []);
@@ -17,10 +19,7 @@ const CommentsPage: FC = () => {
             <h2>Comments</h2>
             <ul>
                 {comments.map(comment => (
-                    <li key={comment.id}>
-                        <h3>{comment.id}. {comment.name}</h3>
-                        <p>{comment.body}</p>
-                    </li>
+                    <CommentComponent key={comment.id} comment={comment}/>
                 ))}
             </ul>
         </div>

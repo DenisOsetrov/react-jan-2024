@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {IUserModel} from "../models/IUserModel";
 
-const UserComponent = ({user}) => {
+interface IProps {
+    user:IUserModel;
+}
+
+const UserComponent:FC<IProps> = ({user}) => {
     return (
         <div>
             <li key={user.id}>

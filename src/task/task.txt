@@ -16,3 +16,5 @@
 7. Створюємо в layout - errorPage і додаємо errorElement.
 8. Розділяємо дані в router.tsx i index.tsx.
 9. Стилізуємо компоненти і pages.
+10. Створимо нові компоненти UserComponent, PostComponent, CommentComponent і перенесемо туди розмітку.
+11. Рознесемо сервіси по файлах. Створимо загальний api.service - з загальною URL, i сервіси для users, posts, comments.

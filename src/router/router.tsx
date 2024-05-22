@@ -12,11 +12,12 @@ const router = createBrowserRouter([
         path: '/',
         element: <MainLayout />,
         errorElement: <ErrorPage />,
-        children: [
+
+        children: [    // дочірні елементи для MainLayout це Outlet - відображається лише 1 компонент
             { index: true, element: <HomePage /> }, // або можна використати path: '' для home
-            { path: 'users', element: <UsersPage /> },
-            { path: 'posts', element: <PostsPage /> },
-            { path: 'comments', element: <CommentsPage /> },
+            { path: 'users', element: <UsersPage /> },  // - шлях /users
+            { path: 'posts', element: <PostsPage /> },  // - шлях /posts
+            { path: 'comments', element: <CommentsPage /> }
         ],
     },
 ]);
