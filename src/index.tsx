@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {RouterProvider} from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
 import './index.css';
 import router from "./router/router";
 
@@ -17,5 +16,3 @@ root.render(
         <RouterProvider router={router}/>
     </React.StrictMode>
 );
-
-reportWebVitals();
