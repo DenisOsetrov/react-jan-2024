@@ -9,7 +9,7 @@ import CommentsPage from "../pages/CommentsPage";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/', // можна path: ''
         element: <MainLayout />,
         errorElement: <ErrorPage />,
 

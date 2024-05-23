@@ -6,7 +6,7 @@ const FooterComponent = () => {
         <div>
             <hr/>
             <div className="footer">
-                <p>© 2024 Your Company. All rights reserved.</p>
+                <p>© 2024 Student of Okten School! Osetrov Denis.</p>
             </div>
         </div>
     );
