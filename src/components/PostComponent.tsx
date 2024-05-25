@@ -14,6 +14,7 @@ const PostComponent: FC<IProps> = ({post}) => {
     const handleViewComments = (postId: string) => {
         navigate(`/posts/${postId}/comments`);
     };
+    // handleViewComments('1')
 
     return (
         <div>

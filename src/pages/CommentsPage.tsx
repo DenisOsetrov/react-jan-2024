@@ -14,7 +14,7 @@ const CommentsPage: FC = () => {
     }, []);
 
     // рендеремо всі коментарі одного поста
-    console.log(useParams());           // отримаємо {id:4} - id - прописали в path routers, 4 - написнули на 4 post
+    // console.log(useParams());           // отримаємо {id:4} - id - прописали в path routers, 4 - написнули на 4 post
     const {id} = useParams();  // деструктуруємо useParams()
     console.log(id);                    // відповідь: 4 (при натисканні на 4 post)
 

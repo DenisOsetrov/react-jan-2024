@@ -10,7 +10,7 @@ const MainLayout: FC = () => {
 
             <NavLink to="" className="no-decoration">
                 <h2 className="center">
-                    Please make your choice and choose one of three options!
+                    My home page. Plan of my task here:
                 </h2>
             </NavLink>
 

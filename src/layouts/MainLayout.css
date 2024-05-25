@@ -3,7 +3,7 @@
     text-decoration: none;
     margin: 20px 0;
     font-size: 24px;
-    color: #333;
+    color: rgba(106, 13, 119, 0.91);
 }
 
 .no-decoration {
@@ -14,7 +14,7 @@
 
 .no-decoration h2:hover {
     text-decoration: none;
-    color: #982020; /* Колір при наведенні */
+    color: #c4992d; /* Колір при наведенні */
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Додавання тіні при наведенні */
 }
 
