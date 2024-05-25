@@ -1,6 +1,6 @@
 import {AxiosResponse} from "axios";
-import {IPostModel} from "../../models/IPostModel";
-import axiosInstance from "../api.service";
+import {IPostModel} from "../models/IPostModel";
+import axiosInstance from "./api.service";
 
 const postsService = {
     getAllPosts: (): Promise<AxiosResponse<IPostModel[]>> => {

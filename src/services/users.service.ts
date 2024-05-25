@@ -1,6 +1,6 @@
 import {AxiosResponse} from "axios";
-import {IUserModel} from "../../models/IUserModel";
-import axiosInstance from "../api.service";
+import {IUserModel} from "../models/IUserModel";
+import axiosInstance from "./api.service";
 
 
 const usersService = {

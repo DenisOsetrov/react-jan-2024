@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {ICommentModel} from "../models/ICommentModel";
-import CommentComponent from "../components/CommentComponent";
+import {ICommentModel} from "../../models/ICommentModel";
+import CommentComponent from "./CommentComponent";
 
 interface IProps {
     comments: ICommentModel[];

@@ -1,6 +1,6 @@
 import {AxiosResponse} from "axios";
-import {ICommentModel} from "../../models/ICommentModel";
-import axiosInstance from "../api.service";
+import {ICommentModel} from "../models/ICommentModel";
+import axiosInstance from "./api.service";
 
 
 const commentsService = {

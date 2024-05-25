@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
-import {IUserModel} from "../models/IUserModel";
-import UserComponent from "../components/UserComponent";
-import usersService from "../services/users-api-service/users.service";
+import {IUserModel} from "../../models/IUserModel";
+import UserComponent from "./UserComponent";
+import usersService from "../../services/users.service";
 
 
 const UsersComponent: FC = () => {
@@ -10,6 +10,7 @@ const UsersComponent: FC = () => {
 
     useEffect(() => {
         usersService.getAllUsers().then(value => {
+            // console.log("Posts data:", value.data);
             setUsers(value.data);
         })
     }, []);

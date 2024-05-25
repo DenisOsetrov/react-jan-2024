@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {NavLink, Outlet} from 'react-router-dom';
 import './MainLayout.css';
-import HeaderComponent from "../components/header/HeaderComponent";
-import FooterComponent from "../components/footer/FooterComponent";
+import HeaderComponent from "../../components/header/HeaderComponent";
+import FooterComponent from "../../components/footer/FooterComponent";
 
 const MainLayout: FC = () => {
     return (
@@ -10,7 +10,7 @@ const MainLayout: FC = () => {
 
             <NavLink to="" className="no-decoration">
                 <h2 className="center">
-                    My home page. Plan of my task here:
+                    Task 7. My home page. Plan of my task here:
                 </h2>
             </NavLink>
 
