@@ -6,10 +6,10 @@ interface IProps {
 }
 
 
-const CommentComponent:FC <IProps> = ({comment}) => {
+const CommentComponent: FC<IProps> = ({comment}) => {
     return (
         <div>
-            <li key={comment.id}>
+            <li>
                 <h3>{comment.id}. {comment.name}</h3>
                 <p>{comment.body}</p>
             </li>

@@ -10,18 +10,25 @@ import CommentsPage from "../pages/CommentsPage";
 const router = createBrowserRouter([
     {
         path: '/', // можна path: ''
-        element: <MainLayout />,
-        errorElement: <ErrorPage />,
+        element: <MainLayout/>,
+        errorElement: <ErrorPage/>,
 
         children: [    // дочірні елементи для MainLayout це Outlet - відображається лише 1 компонент
-            { index: true, element: <HomePage /> }, // або можна використати path: '' для home
-            { path: 'users', element: <UsersPage />,
+            {index: true, element: <HomePage/>}, // або можна використати path: '' для home
+
+            {
+                path: 'users', element: <UsersPage/>,
                 children: [
                     {path: ':id', element: <PostsPage/>} // залишаємося на батьківському рівні
-                ]},
+                ]
+            },
             // { path: 'users/:id', element: <PostsPage/>}, // коли хочемо замінити UsersPage на PostsPage
-            { path: 'posts', element: <PostsPage /> },
-            { path: 'comments', element: <CommentsPage /> }
+
+            // зробимо роут, який буде замінювати при натисканні на кнопку зпости на коментарі даного поста
+            {path: 'posts', element: <PostsPage/>},
+            {path: 'posts/:id/comments', element: <CommentsPage/>},
+
+            {path: 'comments', element: <CommentsPage/>}
         ],
     },
 ]);

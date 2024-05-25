@@ -1,13 +1,12 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import {IPostModel} from "../models/IPostModel";
-import postsService from "../services/posts-api-service/posts.service";
 import PostComponent from "./PostComponent";
 
 interface IProps {
     posts: IPostModel[];
 }
 
-const PostsComponent:FC<IProps> = ({posts}) => {
+const PostsComponent: FC<IProps> = ({posts}) => {
 
 
     return (

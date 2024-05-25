@@ -3,10 +3,10 @@ import {IUserModel} from "../models/IUserModel";
 import {NavLink} from "react-router-dom";
 
 interface IProps {
-    user:IUserModel;
+    user: IUserModel;
 }
 
-const UserComponent:FC<IProps> = ({user}) => {
+const UserComponent: FC<IProps> = ({user}) => {
     return (
         <div>
             <li>
