@@ -5,7 +5,7 @@ const HomeComponent = () => {
         <div>
             <h1 className="center">Welcome to Home, Bro!</h1>
             <h1>Завдання</h1>
-            <h2>1 частина з ДЗ-6 - виконане!!!</h2>
+            <h2>1 частина з ДЗ-6!</h2>
             <p>Створити сторінки та роути на них:</p>
             <ul>
                 <li>users</li>
