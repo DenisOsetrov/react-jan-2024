@@ -6,6 +6,7 @@ interface IProps {
 }
 
 const PostComponent: FC<IProps> = ({post}) => {
+    console.log('Rendering post:', post)
     return (
         <div>
             <h3>{post.id}. {post.title}</h3>

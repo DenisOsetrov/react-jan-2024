@@ -9,9 +9,9 @@ const axiosInstance = axios.create({
 })
 
 // розділяємо url на частини: базову і змінну і додаємо id!
-const getAllPostsByUserId = (id:number) : Promise<PostsResponseModel> => {
-    return axiosInstance.get('/posts/user/'+id)
-        .then(response => response.data)  // повертаємо 1 об'єкт axios, а не всі!
+const getAllPostsByUserId = async (id: number): Promise<PostsResponseModel> => {
+    const response = await axiosInstance.get('/posts/user/' + id);
+    return response.data;  // повертаємо 1 об'єкт axios, а не всі!
 }
 
 

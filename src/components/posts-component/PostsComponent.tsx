@@ -16,8 +16,11 @@ const PostsComponent: FC<IProps> = ({userId}) => {
 
     useEffect(() => {
         getAllPostsByUserId(userId)
-            .then(value => setPosts(value.posts)); // setPosts([...value.posts])) - теж працює, як і з users
-
+            .then(response => {
+                console.log('Fetched posts:', response.posts);
+                setPosts(response.posts);
+            })
+            .catch(error => console.error('Error fetching posts:', error));
     }, [userId]);
     console.log(posts) // відображає два значення: початкове і оновлене!
     return (

@@ -19,14 +19,17 @@ const UsersComponent: FC <IProps> = ({choseUser}) => {
 
     return (
         <div>
-            {
+            {users.length > 0 ? (
                 users.map(user =>
                     <UserComponent
                         key={user.id}
                         user={user}
                         choseUser={choseUser}
-                    /> )
-            }
+                    />
+                )
+            ) : (
+                <p>No users available</p>
+            )}
         </div>
     );
 };
