@@ -4,14 +4,15 @@ import CommentComponent from "./CommentComponent";
 
 interface IProps {
     comments: ICommentModel[];
+    postId?: string;
 }
 
-const CommentsComponent: FC<IProps> = ({comments}) => {
+const CommentsComponent: FC<IProps> = ({comments,postId}) => {
 
 
     return (
         <div>
-            <h2>Comments</h2>
+            <h2>Comments {postId ? `for user ${postId}` : 'for all users'}:</h2>
             <ul>
                 {comments.map(comment => (
                     <CommentComponent key={comment.id} comment={comment}/>

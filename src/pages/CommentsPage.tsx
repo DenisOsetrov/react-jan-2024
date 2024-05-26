@@ -27,7 +27,7 @@ const CommentsPage: FC = () => {
     return (
         <div>
             {/* Передаємо коментарі у компонент CommentsComponent для відображення */}
-            <CommentsComponent comments={comments} />
+            <CommentsComponent comments={comments} postId={id}/>
         </div>
     );
 };

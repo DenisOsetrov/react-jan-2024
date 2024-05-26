@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const HomeComponent = () => {
     return (
@@ -8,9 +9,9 @@ const HomeComponent = () => {
             <h2>1 частина з ДЗ-6!</h2>
             <p>Створити сторінки та роути на них:</p>
             <ul>
-                <li>users</li>
-                <li>posts</li>
-                <li>comments</li>
+                <li><Link to="/users">users</Link></li>
+                <li><Link to="/posts">posts</Link></li>
+                <li><Link to="/comments">comments</Link></li>
             </ul>
             <p>Дані брати з <a href="https://jsonplaceholder.typicode.com" target="_blank"
                                rel="noopener noreferrer">JSONPlaceholder</a></p>

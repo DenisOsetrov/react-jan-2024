@@ -4,14 +4,15 @@ import PostComponent from "./PostComponent";
 
 interface IProps {
     posts: IPostModel[];
+    userId?: string;
 }
 
-const PostsComponent: FC<IProps> = ({posts}) => {
+const PostsComponent: FC<IProps> = ({posts, userId}) => {
 
 
     return (
         <div>
-            <h2>Posts</h2>
+            <h2>Posts {userId? `for user ${userId}` : 'for all users'}:</h2>
             <ul>
                 {posts.map(post => (
                     <PostComponent key={post.id} post={post}/>

@@ -24,7 +24,7 @@ const PostsPage: FC = () => {
 
     return (
         <div>
-            <PostsComponent posts={posts} />
+            <PostsComponent posts={posts} userId={id}/>
         </div>
     );
 };
