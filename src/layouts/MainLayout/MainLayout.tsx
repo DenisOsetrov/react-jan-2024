@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {NavLink, Outlet} from 'react-router-dom';
 import './MainLayout.css';
-import HeaderComponent from "../../components/header/HeaderComponent";
-import FooterComponent from "../../components/footer/FooterComponent";
+import HeaderComponent from "../../components/Header/HeaderComponent";
+import FooterComponent from "../../components/Footer/FooterComponent";
 
 const MainLayout: FC = () => {
     return (
