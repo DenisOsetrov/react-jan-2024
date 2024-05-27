@@ -18,5 +18,3 @@ const getAllPostsByUserId = async (id: number): Promise<PostsResponseModel> => {
 export {
     getAllPostsByUserId
 }
-
-// // перевести в Аxios!!!! + CSS

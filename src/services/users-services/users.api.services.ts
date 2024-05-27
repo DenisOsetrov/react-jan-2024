@@ -13,9 +13,9 @@ const axiosInstance = axios.create ({
     headers: {'Content-Type': 'application/json'}
 })
 
-const getAllUsers = (): Promise<UsersResponseModel> => {
-    return axiosInstance.get('/users')
-        .then(response => response.data); // axios повертає багато об'єктів, тому вказуємо, лише на потрібний - data!
+const getAllUsers = async (): Promise<UsersResponseModel> => {
+    const response = await axiosInstance.get('/users');
+    return response.data; // axios повертає багато об'єктів, тому вказуємо, лише на потрібний - data!
 };
 
 
