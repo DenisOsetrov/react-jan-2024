@@ -1,7 +1,6 @@
-// створюємо протоколи валідації за допомогою бібл. joi
-
 import Joi from "joi";
 
+// створюємо протоколи валідації за допомогою бібл. joi
 export const postValidator = Joi.object({
     title: Joi
         .string()
