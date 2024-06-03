@@ -1,38 +1,38 @@
-                    Завдання:
+                    Завдання 9:
 
-        1 частина з ДЗ-6 - виконана!!!
+        1 частина з ДЗ-9!
+- На АРІ за посиланням http://owu.linkpc.net/carsAPI/v2/doc
+  зробити аутентифікацію user, який вже існує з даними: username - user12_12, password - P@$$word1.
+- ДЗ на самостійне - Зареєструвати користувача (а далі теж саме - пройти аутентифікацію) і отримати всі машинки
+  користувача.
 
-Створити сторінки та роути на них:
-    - users
-    - posts
-    - comments
-Дані брати з https://jsonplaceholder.typicode.com
-При переході на кожну з них отримувати відповідні відповіді від jsonplaceholder та виводити всі об'єкти.
-
-                    План виконання:
-1. Налаштуємо сервиси взаємодії з АРІ, використовуючи бібліотеку axios.
-2. Створимо моделі даних для users, posts, comments.
-3. Створимо компоненти users, posts, comments.
-4. Встановимо бібліотеку react-router-dom.
-5. Видаляємо файли App.tsx i App.css. Вносимо зміни в index.tsx, створимо router і будемо за ним слідкуватию.
-6. Створимо директорії: pages, layouts-основний => MainLayout: <Header/>, <Footer/>,<Outlet/>-заміняємо частина.
-7. Створюємо в layout - errorPage і додаємо errorElement.
-8. Розділяємо дані в router.tsx i index.tsx.
-9. Стилізуємо компоненти і pages.
-10. Створимо нові компоненти UserComponent, PostComponent, CommentComponent і перенесемо туди розмітку.
-11. Рознесемо сервіси по файлах. Створимо загальний api.service - з загальною URL, i сервіси для users, posts, comments.
-
-        2 частина - ДЗ-7
-
-1. На сторінці з юзерами зробити кнопку/лінку, при кліку на яку буде перехід на сторінку,
-на якій відобразяться пости цього юзера.
-2. На сторінці зі всіма постами зробити те саме, тільки виводити коменти цього поста.
-
-                    План виконання:
-1. Перенесли компоненти і залишили UsersPage i PostsPage
-2. Додали до router новий шлях для id та прописали <Outlet/> children в UsersPage. Відображає всі пости поки що.
-3. В PostsPage використаємо useParams і витягнемо id user.
-4. знайдемо всі пости юзера в компоненті PostsPage за допомогою useState...
-5. в PostsPage додамо UseEffect з перевіркою, і додамо в хук id. Передаємо posts в PostsComponent.
-6. в PostsComponent приймаємо posts i робимо map. + інтерфейс для них.
-7. в PostComponent робимо кнопку з onClick та колбекфункцію, яка викликає navigate на коментарі поста.
+                                План виконання:
+  - завартажимо такі залежності: "axios", "react-router-dom", "react-hook-form".
+  - HeaderComponent для відображення login page i cars page
+  - FooterComponent для стандартного відображення сторінки.
+  - FormComponent з input login i password; використовуємо useForm задамо їм дефолтне значення.
+    З форми деструктуруємо handleSubmit, register. Та параметризуємо useForm під модель отримуваних даних.
+    Реєструємо інпути через ...register. У handleSubmit впровадимо ф-цію authenticate/автентифікувати.
+  - створимо authService, в якіє побудуємо метод authentication(formData)/авторизація,
+    що приймає username i password.
+    В authenticate створимо змінну isAuth - яка вказує на те чи залогінений.
+  - Щоб слідкувати за isAuth використаємо useState + щоб мала глобальну видимість.
+    Тип <boolean> значення false - не залогінений. У використанні буде isAuthState.
+    Якщо user залогінений, то в setIsAuthState зміни на true.
+  - В сервісі будуємо axiosInstance, будуємо authService, в якому є метод authentication:
+    має бути response типу <IAuthDataModel>, який робить постовий запит, здійснює перевірку
+    і в localStorage зберігаємо пару токенів.
+  - побудуємо AuthPage i CarsPage і прописуємо їх в router.
+  - В CarsPage useEffect з функцією carService.getCars()
+  - в сервісах побудуємо ф-ціє carService getCars(), винесемо окремо headers через interceptors.
+  - Побудуємо helper, який слідкуватиме і повертатиме за парою токенів з локалСторендж.
+  - отримали аксес токен i згодом рефреш.
+  - побудуємо ще 2 моделі даних: ICarPaginatedModel і ICarWithAuthMode
+  - в authService доробляємо ф-цію refresh і впроваджеємо в carService
+  - CarsComponent => useState i useEffect => map => CarComponent
+  -
+  -
+  -
+  -
+  -
+  -

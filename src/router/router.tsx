@@ -1,10 +1,8 @@
 import ErrorPage from "../layouts/errors/ErrorPage";
 import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../layouts/MainLayout/MainLayout";
-import HomePage from "../pages/HomePage";
-import UsersPage from "../pages/UsersPage";
-import PostsPage from "../pages/PostsPage";
-import CommentsPage from "../pages/CommentsPage";
+import AuthPage from "../pages/AuthPage";
+import CarsPage from "../pages/CarsPage";
 
 
 const router = createBrowserRouter([
@@ -13,22 +11,9 @@ const router = createBrowserRouter([
         element: <MainLayout/>,
         errorElement: <ErrorPage/>,
 
-        children: [    // дочірні елементи для MainLayout це Outlet - відображається лише 1 компонент
-            {index: true, element: <HomePage/>}, // або можна використати path: '' для home
-
-            {
-                path: 'users', element: <UsersPage/>,
-                children: [
-                    {path: ':id', element: <PostsPage/>} // залишаємося на батьківському рівні
-                ]
-            },
-            // { path: 'users/:id', element: <PostsPage/>}, // коли хочемо замінити UsersPage на PostsPage
-
-            // зробимо роут, який буде замінювати при натисканні на кнопку зпости на коментарі даного поста
-            {path: 'posts', element: <PostsPage/>},
-            {path: 'posts/:id/comments', element: <CommentsPage/>},
-
-            {path: 'comments', element: <CommentsPage/>}
+        children: [    // Outlet лише 1 компонент
+            {index: true, element: <AuthPage/>},
+            { path: 'cars', element: <CarsPage/>}
         ],
     },
 ]);
