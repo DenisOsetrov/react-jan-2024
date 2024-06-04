@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useForm} from "react-hook-form";
 import {IAuthDataModel} from "../../models/IAuthDataModel";
 import {authService} from "../../services/api.service";
 
 import styles from './FormComponent.module.css';
+import {useOutletContext} from "react-router-dom";
 
 const FormComponent = () => {
 
@@ -14,18 +15,18 @@ const FormComponent = () => {
         }
     });
 
-    const [isAuthState, setIsAuthState] = useState<boolean>(false);
+    const [isAuthenticated, setIsAuthenticated] = useOutletContext<[boolean, React.Dispatch<React.SetStateAction<boolean>>]>();
 
     const authenticate = async (formData: IAuthDataModel) => {
         const isAuth = await authService.authentication(formData);
-        setIsAuthState(isAuth);
+        setIsAuthenticated(isAuth);
     }
 
     return (
         <div className={styles.form}>
             <h3>Login form</h3>
             <div>
-                {isAuthState ? <span>ok!</span> : <span>not ok!</span>}
+                {isAuthenticated ? <span>Authorized!</span> : <span>Is not authorized!</span>}
             </div>
 
             <form onSubmit={handleSubmit(authenticate)}>

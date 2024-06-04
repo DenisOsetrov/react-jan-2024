@@ -7,16 +7,23 @@
 .header {
     flex: 0 0 20%;
     background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content {
     flex: 1 0 auto;
     display: flex;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
     background-color: #e9ecef;
 }
 
 .footer {
     flex: 0 0 20%;
     background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
