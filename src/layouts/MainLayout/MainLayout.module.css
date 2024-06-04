@@ -1,0 +1,22 @@
+.mainLayout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    flex: 0 0 20%;
+    background-color: #f8f9fa;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.footer {
+    flex: 0 0 20%;
+    background-color: #f8f9fa;
+}

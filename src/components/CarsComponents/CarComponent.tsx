@@ -1,17 +1,19 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import {ICarWithAuthMode} from "../../models/ICarWithAuthMode";
+
+import styles from './CarComponent.module.css';
+
 
 interface IProps {
     car: ICarWithAuthMode;
 }
 
-const CarComponent:FC<IProps> = ({car}) => {
+const CarComponent: FC<IProps> = ({ car }) => {
     return (
-        <div>
-            <h2>{car.brand}</h2>
+        <div className={styles.car}>
+            <h2>Car №{car.id}. {car.brand}</h2>
             <p>Price: {car.price}</p>
             <p>Year: {car.year}</p>
-            {/*<img src={car.photo} alt={car.brand} width="200"/>*/}
         </div>
     );
 };

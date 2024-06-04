@@ -30,9 +30,4 @@
   - побудуємо ще 2 моделі даних: ICarPaginatedModel і ICarWithAuthMode
   - в authService доробляємо ф-цію refresh і впроваджеємо в carService
   - CarsComponent => useState i useEffect => map => CarComponent
-  -
-  -
-  -
-  -
-  -
-  -
+  - додаємо стилів.
