@@ -5,8 +5,8 @@ import styles from './WarningComponent.module.css';
 const WarningComponent = () => {
     return (
         <div className={styles.warning}>
-            <h2>Access Denied! (Ua: Доступ заборонено)</h2>
-            <p>You need to log in to view this page. (Ua: Ви повинні увійти, щоб переглянути цю сторінку)</p>
+            <h2>Access Denied!</h2>
+            <p>You need to log in to view this page</p>
             <Link to="/">Go to Login</Link>
         </div>
     );

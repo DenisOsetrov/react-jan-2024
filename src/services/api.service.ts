@@ -42,20 +42,22 @@ const authService = {
 }
 
 const carService = {
-    getCars: async (page:string) => {
+    getCars: async (page: string): Promise<ICarPaginatedModel | undefined> => {
         try {
-            const response = await axiosInstance.get<ICarPaginatedModel> ('/cars', {params: {page: page}});
-            return response.data;}
-        catch (e) {
-            const axiosError = e as AxiosError; // отримаємо помилки різного номеру - 401...
-            if (axiosError?.response?.status ===401) {
-                const refreshToken = retrieveLocalStorageData<ITokenObtainPair>('tokenPair').refresh
-                await authService.refresh(refreshToken); // відправляємо на сервіс аутентифіказії за навою парою
-                await carService.getCars(page);  // покажи cars!
+            const response = await axiosInstance.get<ICarPaginatedModel>('/cars', { params: { page: page } });
+            return response.data;
+        } catch (e) {
+            const axiosError = e as AxiosError;
+            if (axiosError?.response?.status === 401) {
+                const refreshToken = retrieveLocalStorageData<ITokenObtainPair>('tokenPair').refresh;
+                await authService.refresh(refreshToken);
+                return carService.getCars(page);
+            } else {
+                throw e; // Додано: інші помилки будуть прокидатися далі
             }
         }
     }
-        }
+};
 
 
 export {

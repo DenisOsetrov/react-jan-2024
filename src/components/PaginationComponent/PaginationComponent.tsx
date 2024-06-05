@@ -2,12 +2,26 @@ import React, {FC} from 'react';
 import {IPaginatedPageModel} from "../../models/IPaginatedPageModel";
 
 interface IProps {
-    changePage: (action:string)=> void;
+    setQuery: (query: URLSearchParams) => void;
     prev: IPaginatedPageModel | null;
     next: IPaginatedPageModel | null;
 }
 
-const PaginationComponent:FC<IProps> = ({changePage, prev, next}) => {
+const PaginationComponent: FC<IProps> = ({ setQuery, prev, next }) => {
+    const changePage = (action: string) => {
+        switch (action) {
+            case 'prev':
+                if (prev) {
+                    setQuery(new URLSearchParams({ page: prev.page.toString() }));
+                }
+                break;
+            case 'next':
+                if (next) {
+                    setQuery(new URLSearchParams({ page: next.page.toString() }));
+                }
+                break;
+        }
+    };
     return (
         <div>
 
