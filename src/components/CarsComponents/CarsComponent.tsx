@@ -8,7 +8,7 @@ interface IProps {
     cars: ICarWithAuthMode[]
 }
 const CarsComponent: FC<IProps> = ({ cars }) => {
-    const [, setItems] = useState<ICarWithAuthMode[]>(cars);
+    const [items, setItems] = useState<ICarWithAuthMode[]>(cars);
 
     useEffect(() => {
         setItems(cars);
