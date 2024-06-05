@@ -11,7 +11,7 @@ interface IProps {
 const CarComponent: FC<IProps> = ({ car }) => {
     return (
         <div className={styles.car}>
-            <h2>Car №{car.id}. {car.brand}</h2>
+            <h3>Car №{car.id}. {car.brand}</h3>
             <p>Price: {car.price}</p>
             <p>Year: {car.year}</p>
         </div>
