@@ -42,16 +42,16 @@ const authService = {
 }
 
 const carService = {
-    getCars: async () => {
+    getCars: async (page:string) => {
         try {
-            const response = await axiosInstance.get<ICarPaginatedModel> ('/cars');
+            const response = await axiosInstance.get<ICarPaginatedModel> ('/cars', {params: {page: page}});
             return response.data;}
         catch (e) {
             const axiosError = e as AxiosError; // отримаємо помилки різного номеру - 401...
             if (axiosError?.response?.status ===401) {
                 const refreshToken = retrieveLocalStorageData<ITokenObtainPair>('tokenPair').refresh
                 await authService.refresh(refreshToken); // відправляємо на сервіс аутентифіказії за навою парою
-                await carService.getCars()  // покажи cars!
+                await carService.getCars(page);  // покажи cars!
             }
         }
     }
