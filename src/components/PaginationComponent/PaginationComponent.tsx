@@ -24,6 +24,7 @@ const PaginationComponent: FC<IProps> = ({ setQuery, prev, next }) => {
                 break;
         }
     };
+
     return (
         <div className={styles.paginationContainer}>
             <button
