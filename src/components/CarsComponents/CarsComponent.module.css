@@ -1,0 +1,7 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-rows: repeat(3, auto); /* 3 рядки */
+    gap: 10px; /* Відступи між елементами */
+    padding: 10px;
+}

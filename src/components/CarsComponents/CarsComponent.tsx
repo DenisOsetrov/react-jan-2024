@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import CarComponent from "./CarComponent";
 import {ICarWithAuthMode} from "../../models/ICarWithAuthMode";
-import {carService} from "../../services/api.service";
+import styles from './CarsComponent.module.css';
 
-const CarsComponent = () => {
 
-    const [cars, setCars] = useState<ICarWithAuthMode[]>([]);
+interface IProps {
+    cars: ICarWithAuthMode[]
+}
+const CarsComponent: FC<IProps> = ({ cars }) => {
+    const [, setItems] = useState<ICarWithAuthMode[]>(cars);
 
     useEffect(() => {
-        carService.getCars().then(data => {
-            if (data && data.items) {
-                setCars(data.items);
-            }
-        });
-    }, []);
+        setItems(cars);
+    }, [cars]);
+
 
 
     return (
-        <div>
+        <div className={styles.gridContainer}>
             {cars.map(car => (
                 <CarComponent key={car.id} car={car} />
             ))}

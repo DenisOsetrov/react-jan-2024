@@ -1,7 +1,19 @@
 .car {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px;
+    flex: 1 0 calc(50% - 20px); /* Налаштування ширини карток для двох колонок */
+    box-sizing: border-box;
+}
+
+.car h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.car p {
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
