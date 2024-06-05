@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
 import {IPaginatedPageModel} from "../../models/IPaginatedPageModel";
+import styles from './PaginationComponent.module.css'
+
 
 interface IProps {
     setQuery: (query: URLSearchParams) => void;
@@ -23,20 +25,21 @@ const PaginationComponent: FC<IProps> = ({ setQuery, prev, next }) => {
         }
     };
     return (
-        <div>
-
-            {/* аргументи 'prev' i 'next' ф-ції changePage будуть тригерами з переміщення між сторінками карів */}
-            {/* передамо в агрументи компоненти пропс changePage. Параметризуємо під ф-цію void. Назва action -
-             довільна! disabled={!prev} - дезактивує кнопки */}
-
-            <button onClick={() => {
-                changePage('prev')
-            }} disabled={!prev}>prev</button>
-
-            <button onClick={() => {
-                changePage('next')
-            }} disabled={!next}>next</button>
-
+        <div className={styles.paginationContainer}>
+            <button
+                className={styles.paginationButton}
+                onClick={() => changePage('prev')}
+                disabled={!prev}
+            >
+                prev
+            </button>
+            <button
+                className={styles.paginationButton}
+                onClick={() => changePage('next')}
+                disabled={!next}
+            >
+                next
+            </button>
         </div>
     );
 };
