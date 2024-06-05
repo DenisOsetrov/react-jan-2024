@@ -18,7 +18,7 @@ const CarsComponent: FC<IProps> = ({ cars }) => {
 
     return (
         <div className={styles.gridContainer}>
-            {cars.map(car => (
+            {items.map(car => (
                 <CarComponent key={car.id} car={car} />
             ))}
         </div>
