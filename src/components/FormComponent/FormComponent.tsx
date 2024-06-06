@@ -30,7 +30,6 @@ const FormComponent = () => {
                 }
             </div>
 
-
             <form onSubmit={handleSubmit(authenticate)}>
 
                 <input type="text" {...register('username')}/>
