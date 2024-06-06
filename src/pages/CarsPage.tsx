@@ -31,7 +31,7 @@ const CarsPage = () => {
                 }
             });
         }
-    }, [query, isAuthenticated]);
+    }, [query, isAuthenticated, setIsAuthenticated]);
 
     if (!isAuthenticated) {
         return <WarningComponent />;
