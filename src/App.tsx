@@ -11,7 +11,6 @@ const App = () => {
     const {xxx} = useAppSelector((state) => state.slice1);
     const dispatch = useAppDispatch();
 
-
     return (
         <div className={styles.container}>
             <TaskComponent />
