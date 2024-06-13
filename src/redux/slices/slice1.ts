@@ -11,6 +11,7 @@ const initialState: CounterStateType = {
 export const counter1Slice = createSlice({
     name: "counter1",
     initialState: initialState,
+    // reducers - в ньому будуть виконуватися дії
     reducers: {
         increment: (state,
                     action: PayloadAction<number>) => {
@@ -18,6 +19,12 @@ export const counter1Slice = createSlice({
         },
         decrement: (state) => {
             state.xxx = state.xxx - 1;
+        },
+        reset: (state) => {
+            state.xxx = 0;
+        },
+        donate: (state) => {
+            state.xxx += 500;
         }
     }
 
@@ -25,5 +32,7 @@ export const counter1Slice = createSlice({
 
 export const {
     increment,
-    decrement
+    decrement,
+    reset,
+    donate
 } = counter1Slice.actions
