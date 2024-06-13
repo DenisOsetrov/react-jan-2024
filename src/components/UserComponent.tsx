@@ -7,7 +7,9 @@ interface IProps {
 }
 
 const UserComponent: FC<IProps> = ({user}) => {
+
     let navigate = useNavigate();
+
     return (
         <div>
             {user.id} : {user.name}

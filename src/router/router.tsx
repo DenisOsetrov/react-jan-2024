@@ -10,8 +10,6 @@ const routes: RouteObject[] = [
             {path: 'users', element: <UsersPage/>},
             {path: 'posts', element: <PostsPage/>},
             {path: 'users/:id', element: <UserPage/>},
-
-
         ]
     }
 ]
