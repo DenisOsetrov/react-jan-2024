@@ -20,7 +20,7 @@ const App = () => {
                 <button
                     className={styles.button}
                     onClick={() => {
-                        dispatch(increment(100));
+                        dispatch(increment(1));
                     }}
                 >
                     increment
