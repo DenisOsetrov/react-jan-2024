@@ -18,14 +18,12 @@ export const userService = {
 
         const response = await axiosInstance.get<IUser>(urls.users.byId(+id));
         return response.data;
-
-
     }
 }
 
 export const postService = {
     getAll: async (): Promise<IPost[]> => {
-        let response = await axiosInstance.get<IPost[]>(urls.posts.base);
+        const response = await axiosInstance.get<IPost[]>(urls.posts.base);
         return response.data;
     }
 }
