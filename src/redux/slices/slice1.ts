@@ -6,7 +6,7 @@ type CounterStateType = {
 }
 
 const initialState: CounterStateType = {
-    xxx: 100500
+    xxx: 100
 };
 export const counter1Slice = createSlice({
     name: "counter1",
