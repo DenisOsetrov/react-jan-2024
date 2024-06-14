@@ -18,7 +18,6 @@ const userInitialState: UserSliceType = {
 const loadUsers = createAsyncThunk(
     'userSlice/loadUsers',
     async (_, thunkAPI) => {
-        console.log('aasd');
         try {
             const users = await userService.getAll();
             thunkAPI.dispatch(userActions.changeLoadState(true));

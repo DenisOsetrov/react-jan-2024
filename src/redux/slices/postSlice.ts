@@ -16,11 +16,22 @@ const postInitialState: PostSliceType = {
 }
 
 export const loadPosts = createAsyncThunk(
-    'postSlice/loadPosts',
+    'postSlice/loadPosts', // postSlice/loadPosts' означає: postSlice - ім'я слайсу,
+                                    // loadPosts - дія, яка завантажує пости.
     async (_, thunkAPI) => {
+                              // thunkAPI від Redux Toolkit у функцію асинхронної дії (thunk) і містить кілька
+                              // корисних методів і властивостей:
+                              // dispatch: метод, який дозволяє відправляти (dispatch) інші дії.
+                              // getState: метод, який повертає поточний стан Redux.
+                              // extra: об'єкт, який містить додаткові параметри, передані у thunk під час його створення.
+                              // requestId: унікальний ідентифікатор для поточного запиту thunk.
+                              // signal: об'єкт AbortSignal, який дозволяє скасувати (abort) асинхронну операцію.
+                              // rejectWithValue: метод, який дозволяє відхилити (reject) thunk з певним значенням, яке може бути використано в редюсері.
+                              // fulfillWithValue: метод, який дозволяє успішно виконати (fulfill) thunk з певним значенням.
         try {
             const posts = await postService.getAll();
             return posts;
+            // return await postService.getAll(); // щоб уникнути помилки
         } catch (e) {
             const error = e as AxiosError;
             return thunkAPI.rejectWithValue(error.message);
