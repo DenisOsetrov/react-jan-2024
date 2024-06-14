@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useAppDispatch, useAppSelector} from "../redux/slices/store";
 import {postActions} from "../redux/slices/postSlice";
 
-const PostsPage = () => {
+const PostsComponent = () => {
     const dispatch = useAppDispatch();
     const { posts, isLoaded, error } = useAppSelector(state => state.postSlice);
     const [selectedPost, setSelectedPost] = useState<number | null>(null);
@@ -33,4 +33,4 @@ const PostsPage = () => {
     );
 };
 
-export default PostsPage;
+export default PostsComponent;

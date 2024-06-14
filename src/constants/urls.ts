@@ -12,6 +12,11 @@ const urls = {
         byId: (id: number): string => urls.posts.base + '/' + id
 
     },
+    comments: {
+        base: '/comments',
+        byId: (id: number): string => urls.comments.base + '/' + id,
+        byPostId: (postId: number): string => urls.comments.base + '?postId=' + postId
+    }
 }
 
 export {
